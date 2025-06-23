@@ -130,7 +130,7 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="https://img.freepik.com/premium-vector/business-mission-isolated-cartoon-vector-illustrations_107173-21770.jpg?uid=R184261370&ga=GA1.1.938875538.1737971654&semt=ais_hybrid&w=740"
                 alt="Our Mission"
                 width={500}
                 height={400}

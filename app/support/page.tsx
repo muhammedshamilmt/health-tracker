@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -19,6 +21,7 @@ import {
 import Link from "next/link"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import { motion } from "framer-motion"
 
 export default function SupportPage() {
   const supportOptions = [
@@ -108,7 +111,12 @@ export default function SupportPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-coral-50">
+    <motion.div
+      initial={{ opacity: 0, y: 32 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-coral-50"
+    >
       {/* Header */}
       <Navbar/>
 
@@ -330,6 +338,6 @@ export default function SupportPage() {
         </div>
       </section>
       <Footer/>
-    </div>
+    </motion.div>
   )
 }

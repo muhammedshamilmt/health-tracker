@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -6,10 +8,16 @@ import Image from "next/image"
 import Link from "next/link"
 import Footer  from "@/components/footer"
 import Navbar from "@/components/navbar"
+import { motion } from "framer-motion"
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-coral-50">
+    <motion.div
+      initial={{ opacity: 0, y: 32 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-coral-50"
+    >
       {/* Navigation */}
       <Navbar/>
       {/* Hero Section */}
@@ -287,6 +295,6 @@ export default function LandingPage() {
 
       {/* Footer */}
       <Footer/>
-    </div>
+    </motion.div>
   )
 }
